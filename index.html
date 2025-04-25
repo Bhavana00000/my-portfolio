@@ -1,138 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bhavana's Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhavana - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/img/favicon.ico">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-  <!-- Navbar -->
-  <ul class="navbar">
-    <li><a href="#hero">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><button onclick="toggleDarkMode()">🌓</button></li>
-  </ul>
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Hi, I'm Bhavana</h1>
+        <p>Software Engineer and Tech Enthusiast</p>
+        <p>A passionate developer committed to continuous learning and growth.</p>
+    </section>
 
-  <!-- Hero Section -->
-  <section id="hero">
-    <h1>Hello, I'm Bhavana!</h1>
-    <p>Welcome to my portfolio website. I am a passionate web developer.</p>
-    <button onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })">
-      View My Work
-    </button>
-  </section>
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Bhavana, a tech enthusiast with a strong passion for software development and building meaningful digital experiences.</p>
+    </section>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am a web developer with experience in building responsive and interactive websites.
-      My passion lies in clean code and engaging user interfaces.
-    </p>
-  </section>
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>React, Node.js</li>
+            <li>Java, C</li>
+            <li>Spring Boot, REST APIs</li>
+            <li>MongoDB, PostgreSQL</li>
+            <li>AWS, Jenkins</li>
+        </ul>
+    </section>
 
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-list">
-      <ul>
-        <li>HTML5</li>
-        <li>CSS3</li>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Node.js</li>
-        <li>Git & GitHub</li>
-        <li>Responsive Design</li>
-        <li>Web Performance Optimization</li>
-      </ul>
-    </div>
-  </section>
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project Name</h3>
+            <p>Description of the project.</p>
+            <a href="#">View Project</a>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>My Projects</h2>
-    <div class="project">
-      <h3>Portfolio Website</h3>
-      <p>A clean and responsive portfolio to showcase my work.</p>
-      <a href="https://bhavana00000.github.io/my-portfolio/" target="_blank">Live Demo</a>
-    </div>
-    <div class="project">
-      <h3>Todo App</h3>
-      <p>A simple React-based todo list with CRUD functionality.</p>
-      <a href="https://link-to-project.com" target="_blank">View Project</a>
-    </div>
-  </section>
+    <!-- Education Section -->
+    <section id="education">
+        <h2>Education</h2>
+        <p>B.Tech in Computer Science & Engineering, KL University (2022 - Present)</p>
+    </section>
 
-  <!-- Experience Section -->
-  <section id="Experience">
-    <h2>Experience</h2>
-    <div class="experience-item">
-      <h3>Virtual Internship at AICTE</h3>
-      <p><strong>OCT-2024 - DEC2024</strong></p>
-      <ul>
-        <li>Created landing pages & contributed to key web projects.</li>
-      </ul>
-    </div>
-  </section>
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: bhavana@example.com</p>
+        <p>Location: Your City, Your Country</p>
+        <form>
+            <label for="message">Send a Message:</label>
+            <textarea id="message" name="message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
 
-  <!-- Education Section -->
-  <section id="education">
-    <h2>Education</h2>
-    <div class="education-item">
-      <h3>B.Tech in Computer Science</h3>
-      <p><strong>2022 - 2026</strong></p>
-      <p>KL University</p>
-    </div>
-    <div class="education-item">
-      <h3>Web Development Bootcamp</h3>
-      <p><strong>2021</strong></p>
-      <p>udemy Online Platform</p>
-    </div>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section id="testimonials">
-    <h2>Testimonials</h2>
-    <div class="testimonial">
-      "Bhavana is a dedicated developer with an eye for detail. Her portfolio speaks volumes!" – Mentor
-    </div>
-    <div class="testimonial">
-      "Working with Bhavana was a joy. She always brings creative ideas to the table." – Teammate
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form action="#">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Bhavana Polisetty</p>
-    <div class="social-links">
-      <a href="https://www.linkedin.com/in/bhavana-polisetty" target="_blank">LinkedIn</a>
-      <a href="https://github.com/Bhavana00000" target="_blank">GitHub</a>
-    </div>
-  </footer>
-
-  <!-- Dark Mode Toggle -->
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-    }
-  </script>
+    <script src="script.js"></script>
 </body>
 </html>
