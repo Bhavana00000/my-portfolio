@@ -13,18 +13,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Node.js (optional, if you're using Node.js)
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-
-      - name: Build the site (if necessary)
-        run: npm run build  # Modify this based on your project
+      - name: No build needed
+        run: echo "Skipping build step for static HTML site"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build  # Modify this based on your project
+          publish_dir: ./  # Deploy the root folder
 
 
