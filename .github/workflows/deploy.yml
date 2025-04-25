@@ -8,18 +8,23 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout source
-        uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: Upload HTML
-        uses: actions/upload-pages-artifact@v2
+      - name: Set up Node.js (optional, if you're using Node.js)
+        uses: actions/setup-node@v2
         with:
-          path: ./
+          node-version: '14'
+
+      - name: Build the site (if necessary)
+        run: npm run build  # Modify this based on your project
 
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build  # Modify this based on your project
+
+
