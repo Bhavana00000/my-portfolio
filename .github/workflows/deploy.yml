@@ -1,0 +1,25 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Trigger the workflow on push to the 'main' branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # The OS to run the workflow on
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2  # Checks out the repository
+
+      - name: Set up Node.js (optional, if you're using Node.js)
+        uses: actions/setup-node@v2  # Set up Node.js environment
+        with:
+          node-version: '14'  # Specify the version of Node.js to use (optional for static sites)
+
+      - name: Build the site (not needed for static HTML)
+        run: echo "No build needed"  # If you're not using a build tool (like React), just echo
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3  # GitHub Pages deployment action
