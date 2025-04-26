@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bhavana - Portfolio</title>
+    <title>Bhavana's Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&family=Poppins:wght@300;400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Link to the CSS file -->
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="assets/img/favicon.ico">
+
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <!-- Navigation -->
@@ -15,66 +24,83 @@
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#education">Education</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Home Section -->
     <section id="home">
-        <h1>Hi, I'm Bhavana</h1>
-        <p>Software Engineer and Tech Enthusiast</p>
-        <p>A passionate developer committed to continuous learning and growth.</p>
+        <div class="container">
+            <h1 class="fade-in">Hi, I'm <span style="color: #FF7F50;">Bhavana</span></h1>
+            <p class="fade-in">A passionate web developer crafting beautiful and functional websites.</p>
+        </div>
     </section>
 
     <!-- About Section -->
     <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! I'm Bhavana, a tech enthusiast with a strong passion for software development and building meaningful digital experiences.</p>
+        <div class="container">
+            <h2 class="slide-in">About Me</h2>
+            <p class="slide-in">I'm a dedicated software developer skilled in building responsive web applications. I enjoy turning complex problems into simple, beautiful, and intuitive designs. When I'm not coding, you'll find me exploring new technologies or writing about tech!</p>
+        </div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML, CSS, JavaScript</li>
-            <li>React, Node.js</li>
-            <li>Java, C</li>
-            <li>Spring Boot, REST APIs</li>
-            <li>MongoDB, PostgreSQL</li>
-            <li>AWS, Jenkins</li>
-        </ul>
+        <div class="container">
+            <h2 class="slide-in">My Skills</h2>
+            <div class="skills-container">
+                <div class="skill"><i class="fab fa-html5"></i><span>HTML</span></div>
+                <div class="skill"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+                <div class="skill"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
+                <div class="skill"><i class="fab fa-react"></i><span>React</span></div>
+                <div class="skill"><i class="fab fa-node"></i><span>Node.js</span></div>
+                <div class="skill"><i class="fas fa-database"></i><span>MongoDB</span></div>
+            </div>
+        </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Project Name</h3>
-            <p>Description of the project.</p>
-            <a href="#">View Project</a>
+        <div class="container">
+            <h2 class="fade-in">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Portfolio Website</h3>
+                    <p>Designed and developed a personal portfolio using React.js showcasing my projects and skills.</p>
+                    <a href="#" target="_blank">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Full-stack Blog</h3>
+                    <p>Created a full-stack blog application using Node.js, Express, and MongoDB with authentication.</p>
+                    <a href="#" target="_blank">View Project</a>
+                </div>
+            </div>
         </div>
-        <!-- Add more projects as needed -->
-    </section>
-
-    <!-- Education Section -->
-    <section id="education">
-        <h2>Education</h2>
-        <p>B.Tech in Computer Science & Engineering, KL University (2022 - Present)</p>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: bhavana@example.com</p>
-        <p>Location: Your City, Your Country</p>
-        <form>
-            <label for="message">Send a Message:</label>
-            <textarea id="message" name="message"></textarea>
-            <button type="submit">Send</button>
-        </form>
+        <div class="container">
+            <h2 class="slide-in">Contact Me</h2>
+            <form action="submit_form.php" method="POST">
+                <textarea id="message" name="message" placeholder="Write your message here..." rows="6" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
     </section>
 
-    <script src="script.js"></script>
+    <!-- Optional: Smooth Scroll Script -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
+
