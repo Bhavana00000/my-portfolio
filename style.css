@@ -1,1 +1,127 @@
-body { font-family: Arial; background: #f2f2f2; text-align: center; padding: 50px; } 
+/* General Body and Typography Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
+h1, h2, h3, h4 {
+  color: #2c3e50;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header Styles */
+header {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 40px 0;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+/* Navigation Styles */
+nav {
+  text-align: center;
+  padding: 15px;
+  background-color: #34495e;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin: 0 15px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+nav a:hover {
+  background-color: #1abc9c;
+  border-radius: 5px;
+}
+
+/* Section Content Styles */
+.content {
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.content h2 {
+  font-size: 2em;
+  color: #16a085;
+}
+
+.content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.content ul li {
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+.content ul li a {
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+.content ul li a:hover {
+  color: #16a085;
+}
+
+/* Education and Skills Section */
+.education, .skills {
+  background-color: #ecf0f1;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.education h3, .skills h3 {
+  color: #16a085;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.education ul, .skills ul {
+  padding-left: 20px;
+  text-align: left;
+}
+
+.education ul li, .skills ul li {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.education ul li strong, .skills ul li strong {
+  font-weight: bold;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #2c3e50;
+  color: white;
+}
+
+footer p {
+  font-size: 1em;
+  margin: 0;
+}
+
